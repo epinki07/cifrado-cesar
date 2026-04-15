@@ -1,113 +1,64 @@
-# 🔐 Cifrado César
+# Cifrado Cesar - Descifrador
 
-Herramienta CLI en **Python** para cifrar y descifrar texto utilizando el método César. Soporta alfabeto español con **ñ**, fuerza bruta y variantes de alfabeto.
+Herramienta en Python para **descifrar** texto cifrado con el metodo Cesar. Soporta el alfabeto espanol con la letra n.
 
-## 📋 ¿Qué hace?
+## Que hace
 
-- **Cifrado**: Transforma texto usando desplazamiento de caracteres
-- **Descifrado**: Revierte el cifrado con la clave correcta
-- **Fuerza bruta**: Muestra todas las combinaciones posibles
-- **Soporte ñ**: Alfabeto español completo (27 letras)
-- **Modo interactivo**: CLI fácil de usar
+- **Descifrado**: Revierte el cifrado cesar dado un desplazamiento
+- **Soporte n**: Alfabeto espanol completo (27 letras)
+- **Interfaz simple**: Script directo por consola
 
-## 🛠️ Tech Stack
-
-| Lenguaje | Tipo | Librerías |
-|----------|------|-----------|
-| Python 3.8+ | CLI | argparse |
-| | | typing |
-
-## 🚀 Cómo usarlo
-
-### Prerrequisitos
-
-```bash
-python3 --version  # Python 3.8+
-```
-
-### Instalación
-
-```bash
-# Clonar repositorio
-git clone https://github.com/epinki07/cifrado-cesar.git
-cd cifrado-cesar
-
-# No requiere dependencias externas (stdlib)
-```
-
-### Uso
-
-```bash
-# Cifrar texto con clave 3
-python cifrado.py cifrar "Hola Mundo" --clave 3
-
-# Descifrar texto
-python cifrado.py descifrar "Krod Pxqgr" --clave 3
-
-# Fuerza bruta (probar todas las claves)
-python cifrado.py fuerza-bruta "Krod Pxqgr"
-
-# Con alfabeto extendido (con ñ)
-python cifrado.py cifrar "Niño" --clave 5 --alfabeto-espanol
-```
-
-## 📁 Estructura del proyecto
+## Archivos
 
 ```
 cifrado-cesar/
-├── cifrado.py          # Lógica principal
-├── cli.py              # Interfaz de línea de comandos
-├── tests/              # Tests unitarios
-│   └── test_cifrado.py
+├── descifrar_cesar_es.py   # Script de descifrado
+├── Como usar cesar.png     # Captura de uso
 └── README.md
 ```
 
-## 📖 ¿Cómo funciona?
+## Tech Stack
 
-El cifrado César es un método de sustitución donde cada letra se desplaza una cantidad fija de posiciones en el alfabeto.
+| Lenguaje | Tipo |
+|----------|------|
+| Python 3.8+ | Script CLI |
 
-**Ejemplo con clave = 3:**
-```
-A B C D E F G H I J K L M N Ñ O P Q R S T U V W X Y Z
-↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓
-D E F G H I J K L M N Ñ O P Q R S T U V W X Y Z A B C
-```
-
-**"HOLA"** → **"KROD"** (con clave 3)
-
-## 🧪 Tests
+## Como usarlo
 
 ```bash
-# Ejecutar tests
-python -m pytest tests/
+# Clonar
+git clone https://github.com/epinki07/cifrado-cesar.git
+cd cifrado-cesar
 
-# O con unittest
-python -m unittest discover
+# Ejecutar el descifrador
+python3 descifrar_cesar_es.py
 ```
 
-## 💡 Qué aprendí
+## Ejemplo
 
-- **Fundamentos de criptografía**: Cifrados de sustitución
-- **Manejo de strings en Python**: Unicode, codificación
-- **CLI design**: argparse, UX en terminal
-- **Testing**: pytest, casos borde con ñ y caracteres especiales
-- **Atención al detalle**: Alfabeto español vs inglés
+El script solicita el texto cifrado y el desplazamiento utilizado, y devuelve el texto en claro.
 
-## 🔮 Mejoras futuras
+```
+Texto cifrado: Krood pxqgr
+Desplazamiento: 3
+Resultado: Hola mundo
+```
 
-- [ ] Soporte para archivos de entrada/salida
-- [ ] Modo interactivo (REPL)
-- [ ] Otros cifrados clásicos (Vigenère, Atbash)
-- [ ] Empaquetado como pip installable
+## Que aprendi
 
-## 🤝 Autor
+- Implementacion del algoritmo Cesar
+- Manejo de cadenas en Python
+- Soporte de caracteres especiales del espanol (n)
 
-**Diego Ramirez Magaña**
+## Autor
 
-- 📧 dramirezmagana@gmail.com
-- 🔗 [LinkedIn](https://www.linkedin.com/in/diego-ramirez-maga%C3%B1a-b15022298/)
-- 🐙 [GitHub](https://github.com/epinki07)
+**Diego Ramirez Magana**
+
+- dramirezmagana@gmail.com
+- [LinkedIn](https://www.linkedin.com/in/diego-ramirez-maga%C3%B1a-b15022298/)
+- [GitHub](https://github.com/epinki07)
 
 ---
 
-> **Nota**: Proyecto pequeño pero útil para demostrar fundamentos sólidos, manejo de lógica y atención al detalle en implementación.
+> Ejercicio practico de criptografia clasica con Python, enfocado en el alfabeto espanol.
+
