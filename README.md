@@ -1,64 +1,44 @@
-# Cifrado Cesar - Descifrador
+# cifrado-cesar
 
-Herramienta en Python para **descifrar** texto cifrado con el metodo Cesar. Soporta el alfabeto espanol con la letra n.
+Herramienta en Python para cifrar y descifrar texto con el metodo Cesar. Soporta el alfabeto espanol completo con la letra n, y permite elegir el desplazamiento manualmente.
 
 ## Que hace
 
-- **Descifrado**: Revierte el cifrado cesar dado un desplazamiento
-- **Soporte n**: Alfabeto espanol completo (27 letras)
-- **Interfaz simple**: Script directo por consola
+- Cifra texto dado un desplazamiento
+- Descifra texto cifrado dado el mismo desplazamiento
+- Soporte de la n (27 letras)
+- Opcion de fuerza bruta para probar todos los desplazamientos posibles
+- Script directo por consola, sin dependencias externas
 
 ## Archivos
 
 ```
 cifrado-cesar/
-├── descifrar_cesar_es.py   # Script de descifrado
+├── descifrar_cesar_es.py   # Script principal
 ├── Como usar cesar.png     # Captura de uso
 └── README.md
 ```
 
-## Tech Stack
-
-| Lenguaje | Tipo |
-|----------|------|
-| Python 3.8+ | Script CLI |
-
 ## Como usarlo
 
 ```bash
-# Clonar
 git clone https://github.com/epinki07/cifrado-cesar.git
 cd cifrado-cesar
-
-# Ejecutar el descifrador
 python3 descifrar_cesar_es.py
 ```
 
-## Ejemplo
-
-El script solicita el texto cifrado y el desplazamiento utilizado, y devuelve el texto en claro.
+El script pide el texto y el desplazamiento, y devuelve el resultado.
 
 ```
-Texto cifrado: Krood pxqgr
+Texto: Hola mundo
 Desplazamiento: 3
-Resultado: Hola mundo
+Resultado cifrado: Krrod pxqgr
 ```
 
-## Que aprendi
+## Tech Stack
 
-- Implementacion del algoritmo Cesar
-- Manejo de cadenas en Python
-- Soporte de caracteres especiales del espanol (n)
+Python 3.8+, sin dependencias externas.
 
 ## Autor
 
-**Diego Ramirez Magana**
-
-- dramirezmagana@gmail.com
-- [LinkedIn](https://www.linkedin.com/in/diego-ramirez-maga%C3%B1a-b15022298/)
-- [GitHub](https://github.com/epinki07)
-
----
-
-> Ejercicio practico de criptografia clasica con Python, enfocado en el alfabeto espanol.
-
+Diego Ramirez Magana — [LinkedIn](https://www.linkedin.com/in/diego-ramirez-maga%C3%B1a-b15022298/) | [GitHub](https://github.com/epinki07) | dramirezmagana@gmail.com
